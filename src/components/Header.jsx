@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -12,23 +14,30 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileOpen(false);
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__inner">
-        <a href="#home" className="header__logo">
+        <Link to="/" className="header__logo">
           <div className="header__logo-icon">GD</div>
           <div className="header__logo-text">
             <span className="header__brand">GD Pest Control</span>
             <span className="header__tagline">Private Limited</span>
           </div>
-        </a>
+        </Link>
 
         <nav className={`header__nav ${mobileOpen ? 'header__nav--open' : ''}`}>
-          <a href="#home" onClick={() => setMobileOpen(false)}>Home</a>
-          <a href="#services" onClick={() => setMobileOpen(false)}>Services</a>
-          <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
-          <a href="#diy" onClick={() => setMobileOpen(false)}>Tips</a>
-          <a href="#contact" onClick={() => setMobileOpen(false)}>Contact</a>
+          <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
+          <Link to="/services" className={isActive('/services') ? 'active' : ''}>Services</Link>
+          <Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link>
+          <Link to="/tips" className={isActive('/tips') ? 'active' : ''}>Tips</Link>
+          <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</Link>
         </nav>
 
         <div className="header__actions">

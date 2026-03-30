@@ -1,0 +1,134 @@
+.tp-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.tp-header__icon {
+  color: var(--primary);
+}
+
+.tp-header .section-title {
+  margin-bottom: 0.25rem;
+}
+
+/* DIY Cards */
+.tp-diy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.tp-diy-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: var(--transition);
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.tp-diy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.tp-diy-card__pest {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  background: var(--primary-glow);
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.tp-diy-card__tip {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Preventive Section */
+.tp-prevent-section {
+  background: var(--cream);
+}
+
+.tp-prevent-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.tp-prevent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.tp-prevent-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.tp-prevent-list__icon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.tp-prevent-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Warning CTA */
+.tp-warning {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-surface) 100%);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.tp-warning h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tp-warning p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.tp-warning__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .tp-diy-grid { grid-template-columns: repeat(2, 1fr); }
+  .tp-prevent-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .tp-diy-grid { grid-template-columns: 1fr; }
+  .tp-warning h2 { font-size: 1.75rem; }
+}

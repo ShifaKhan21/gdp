@@ -98,6 +98,15 @@
   width: 100%;
 }
 
+.header__nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.header__nav a.active::after {
+  width: 100%;
+}
+
 /* Phone CTA */
 .header__actions {
   display: flex;
