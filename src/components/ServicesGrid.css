@@ -118,4 +118,23 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
+  .service-card__image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card__body {
+    padding: 1.25rem;
+  }
+  .service-card__title {
+    font-size: 1.15rem;
+  }
+  .service-card__desc {
+    font-size: 0.85rem;
+  }
+  .service-card__logo-overlay {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }

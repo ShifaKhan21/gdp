@@ -1,5 +1,6 @@
 import React from 'react';
 import { SprayCan, Trees, Bird, Zap } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import './SpecialServices.css';
 
 const specials = [
@@ -29,24 +30,24 @@ const SpecialServices = () => {
   return (
     <section className="section special-section">
       <div className="container">
-        <div className="text-center">
+        <ScrollReveal variant="reveal" className="text-center">
           <span className="section-label">More Solutions</span>
           <h2 className="section-title">Specialized Services</h2>
           <div className="section-divider centered" />
           <p className="section-subtitle centered">
             Beyond standard pest control — we handle even the most unusual infestations.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="special-grid">
+        <ScrollReveal variant="reveal-stagger" className="special-grid">
           {specials.map((s, i) => (
-            <div key={i} className="special-card" style={{ animationDelay: `${i * 0.1}s` }}>
+            <div key={i} className="special-card">
               <div className="special-card__icon">{s.icon}</div>
               <h3 className="special-card__title">{s.title}</h3>
               <p className="special-card__desc">{s.desc}</p>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

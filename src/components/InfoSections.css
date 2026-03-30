@@ -104,3 +104,26 @@
     height: 300px;
   }
 }
+
+@media (max-width: 480px) {
+  .info-block__content .section-title {
+    font-size: 1.8rem;
+  }
+  .info-block__visual img {
+    height: 220px;
+  }
+  .info-cta-card {
+    padding: 2rem 1.5rem;
+  }
+  .info-cta-card h3 {
+    font-size: 1.5rem;
+  }
+  .info-cta-card__numbers {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  .info-block {
+    margin-bottom: 4rem;
+  }
+}

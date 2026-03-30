@@ -324,3 +324,10 @@ img {
   .section-title { font-size: 2rem; }
   .container { padding: 0 1.25rem; }
 }
+
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  .section { padding: 3rem 0; }
+  .section-title { font-size: 1.8rem; }
+  .btn { padding: 0.8rem 1.7rem; }
+}

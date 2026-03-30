@@ -87,3 +87,14 @@
     font-size: 1.8rem;
   }
 }
+
+@media (max-width: 480px) {
+  .preloader__logo {
+    height: 35vh;
+  }
+  .preloader__text {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

@@ -80,3 +80,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .special-card {
+    padding: 1.5rem;
+  }
+  .special-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+  .special-card__title {
+    font-size: 1.15rem;
+  }
+}

@@ -95,3 +95,24 @@
     height: 350px;
   }
 }
+
+@media (max-width: 480px) {
+  .about-image img {
+    height: 250px;
+  }
+  .about-image__badge {
+    padding: 0.8rem 1.25rem;
+  }
+  .about-image__badge-number {
+    font-size: 1.8rem;
+  }
+  .about-image__badge-text {
+    font-size: 0.6rem;
+  }
+  .about-feature {
+    font-size: 0.85rem;
+  }
+  .about-content .section-title {
+    font-size: 2rem;
+  }
+}

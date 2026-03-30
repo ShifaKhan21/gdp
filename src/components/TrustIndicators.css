@@ -126,3 +126,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .trust-card {
+    padding: 1.5rem;
+  }
+  .trust-card__header h3 {
+    font-size: 1.1rem;
+  }
+  .trust-badge__name {
+    font-size: 1.25rem;
+  }
+}
