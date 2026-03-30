@@ -1,21 +1,22 @@
 import React from 'react';
 import { CheckCircle, ShieldCheck, Award } from 'lucide-react';
 import './AboutSection.css';
+import ScrollReveal from './ScrollReveal';
 
 const AboutSection = () => {
   return (
     <section id="about" className="section about-section">
       <div className="container">
         <div className="about-grid">
-          <div className="about-image animate-left">
+          <ScrollReveal variant="reveal-left" className="about-image">
             <img src="/images/about-team.png" alt="GD Pest Control Team" />
             <div className="about-image__badge">
               <span className="about-image__badge-number">15+</span>
               <span className="about-image__badge-text">Years of Excellence</span>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="about-content animate-right">
+          <ScrollReveal variant="reveal-right" className="about-content">
             <span className="section-label">About Us</span>
             <h2 className="section-title">The Complete Pest Management</h2>
             <div className="section-divider" />
@@ -28,7 +29,7 @@ const AboutSection = () => {
               If you are seeing one pest or insect chances are you are not seeing the rest. Call GD Pest Control ASAP!
             </p>
 
-            <div className="about-features">
+            <ScrollReveal variant="reveal-stagger" className="about-features">
               <div className="about-feature">
                 <CheckCircle size={20} className="about-feature__icon" />
                 <span>Long Lasting &amp; Eco Friendly Solutions</span>
@@ -45,12 +46,12 @@ const AboutSection = () => {
                 <CheckCircle size={20} className="about-feature__icon" />
                 <span>Approved Vendors: RBI, MES, MDL</span>
               </div>
-            </div>
+            </ScrollReveal>
 
             <a href="#contact" className="btn btn-primary">
               Contact Us Today
             </a>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

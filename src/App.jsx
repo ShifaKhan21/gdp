@@ -7,10 +7,12 @@ import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import TipsPage from './pages/TipsPage';
 import ContactPage from './pages/ContactPage';
+import Preloader from './components/Preloader';
 
 function App() {
   return (
     <Router>
+      <Preloader />
       <Header />
       <main>
         <Routes>

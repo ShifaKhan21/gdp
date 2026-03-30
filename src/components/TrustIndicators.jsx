@@ -1,21 +1,22 @@
 import React from 'react';
 import { Award, ShieldCheck, BadgeCheck } from 'lucide-react';
 import './TrustIndicators.css';
+import ScrollReveal from './ScrollReveal';
 
 const TrustIndicators = () => {
   return (
     <section className="section trust-section">
       <div className="container">
-        <div className="text-center">
+        <ScrollReveal variant="reveal" className="text-center">
           <span className="section-label">Why Choose Us</span>
           <h2 className="section-title">Trusted &amp; Certified</h2>
           <div className="section-divider centered" />
           <p className="section-subtitle centered">
             We are verified, certified and trusted by leading government and private organizations.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="trust-grid">
+        <ScrollReveal variant="reveal-stagger" className="trust-grid">
           {/* Certifications */}
           <div className="trust-card">
             <div className="trust-card__header">
@@ -70,7 +71,7 @@ const TrustIndicators = () => {
             </div>
             <span className="trust-card__label">Associate Member of PMA</span>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

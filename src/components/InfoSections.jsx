@@ -1,6 +1,7 @@
 import React from 'react';
 import { Lightbulb, Shield, CheckCircle } from 'lucide-react';
 import './InfoSections.css';
+import ScrollReveal from './ScrollReveal';
 
 const diyTips = [
   'Sprinkle Boric powder to repel cockroaches.',
@@ -32,7 +33,7 @@ const InfoSections = () => {
 
         {/* DIY Solutions */}
         <div className="info-block">
-          <div className="info-block__content animate-left">
+          <ScrollReveal variant="reveal-left" className="info-block__content">
             <span className="section-label">
               <Lightbulb size={14} /> DIY Solutions
             </span>
@@ -41,23 +42,23 @@ const InfoSections = () => {
             <p className="info-block__intro">
               Try these natural, eco-friendly methods to keep common pests at bay between professional treatments.
             </p>
-            <ul className="info-list">
+            <ScrollReveal element="ul" variant="reveal-stagger" className="info-list">
               {diyTips.map((tip, i) => (
                 <li key={i} className="info-list__item">
                   <CheckCircle size={16} className="info-list__icon" />
                   <span>{tip}</span>
                 </li>
               ))}
-            </ul>
-          </div>
-          <div className="info-block__visual animate-right">
+            </ScrollReveal>
+          </ScrollReveal>
+          <ScrollReveal variant="reveal-right" className="info-block__visual">
             <img src="/images/happy-family.png" alt="Happy pest-free home" />
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Preventive Measures */}
         <div className="info-block info-block--reverse">
-          <div className="info-block__content animate-right">
+          <ScrollReveal variant="reveal-right" className="info-block__content">
             <span className="section-label">
               <Shield size={14} /> Preventive Measures
             </span>
@@ -66,16 +67,16 @@ const InfoSections = () => {
             <p className="info-block__intro">
               Follow these essential practices to minimize the risk of pest infestation in your home and workplace.
             </p>
-            <ul className="info-list">
+            <ScrollReveal element="ul" variant="reveal-stagger" className="info-list">
               {preventiveTips.map((tip, i) => (
                 <li key={i} className="info-list__item">
                   <CheckCircle size={16} className="info-list__icon" />
                   <span>{tip}</span>
                 </li>
               ))}
-            </ul>
-          </div>
-          <div className="info-block__visual animate-left">
+            </ScrollReveal>
+          </ScrollReveal>
+          <ScrollReveal variant="reveal-left" className="info-block__visual">
             <div className="info-cta-card">
               <h3>Seeing One Pest?</h3>
               <p>Chances are you are not seeing the rest.</p>
@@ -87,7 +88,7 @@ const InfoSections = () => {
                 <span>📞 8652444466</span>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
       </div>

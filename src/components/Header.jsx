@@ -25,11 +25,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__inner">
         <Link to="/" className="header__logo">
-          <div className="header__logo-icon">GD</div>
-          <div className="header__logo-text">
-            <span className="header__brand">GD Pest Control</span>
-            <span className="header__tagline">Private Limited</span>
-          </div>
+          <img src="/logo.png" alt="GD Pest Control Logo" className="header__logo-img" />
         </Link>
 
         <nav className={`header__nav ${mobileOpen ? 'header__nav--open' : ''}`}>

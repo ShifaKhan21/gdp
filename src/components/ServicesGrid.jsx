@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import './ServicesGrid.css';
 
+import ScrollReveal from './ScrollReveal';
+
 const services = [
   {
     image: '/images/service-general.png',
@@ -41,20 +43,21 @@ const ServicesGrid = () => {
   return (
     <section id="services" className="section services-section">
       <div className="container">
-        <div className="text-center">
+        <ScrollReveal variant="reveal" className="text-center">
           <span className="section-label">What We Do</span>
           <h2 className="section-title">Our Pest Control Services</h2>
           <div className="section-divider centered" />
           <p className="section-subtitle centered">
             Comprehensive pest management with the latest technology — serving Mumbai, Navi Mumbai, Thane and all over Maharashtra.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="services-grid">
+        <ScrollReveal variant="reveal-stagger" className="services-grid">
           {services.map((s, i) => (
-            <div key={i} className="service-card" style={{ animationDelay: `${i * 0.1}s` }}>
+            <div key={i} className="service-card">
               <div className="service-card__image">
-                <img src={s.image} alt={s.title} />
+                <img src={s.image} alt={s.title} className="service-card__main-img" />
+                <img src="/logo.png" alt="GD Pest Control" className="service-card__logo-overlay" />
                 <div className="service-card__overlay">
                   <a href="#contact" className="btn btn-white">
                     Book Now <ArrowRight size={16} />
@@ -68,7 +71,7 @@ const ServicesGrid = () => {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
